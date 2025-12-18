@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts (Noto Serif KR, Playfair Display) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -57,9 +57,11 @@
         }
     </script>
     <style>
+        html {
+            scroll-padding-top: 80px; /* 헤더 높이만큼 스크롤 여백 */
+        }
         body {
             font-family: 'Noto Serif KR', serif;
-            scroll-behavior: smooth;
         }
         .text-shadow {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -184,6 +186,7 @@
                 <a href="#understanding" class="hover:text-gold-400 transition-colors">COFFEE</a>
                 <a href="#brewing" class="hover:text-gold-400 transition-colors">BREWING</a>
                 <a href="#practice" class="hover:text-gold-400 transition-colors">PRACTICE</a>
+                <a href="#contact" class="hover:text-gold-400 transition-colors">CONTACT</a>
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gold-400 focus:outline-none">
@@ -197,7 +200,8 @@
                 <a href="#curriculum" class="mobile-link hover:text-gold-400 transition-colors py-2 border-b border-coffee-800">CURRICULUM</a>
                 <a href="#understanding" class="mobile-link hover:text-gold-400 transition-colors py-2 border-b border-coffee-800">COFFEE</a>
                 <a href="#brewing" class="mobile-link hover:text-gold-400 transition-colors py-2 border-b border-coffee-800">BREWING</a>
-                <a href="#practice" class="mobile-link hover:text-gold-400 transition-colors py-2">PRACTICE</a>
+                <a href="#practice" class="mobile-link hover:text-gold-400 transition-colors py-2 border-b border-coffee-800">PRACTICE</a>
+                <a href="#contact" class="mobile-link hover:text-gold-400 transition-colors py-2">CONTACT</a>
             </div>
         </div>
     </header>
@@ -213,9 +217,14 @@
             <p class="text-gray-200 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed animate-[fadeInUp_1.2s_ease-out]">
                 라온트리는 커피의 본질을 탐구하고,<br>최고의 한 잔을 위한 여정을 함께합니다.
             </p>
-            <a href="#about" class="inline-block px-12 py-4 border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-coffee-950 transition-all duration-300 text-sm tracking-[0.2em] uppercase font-bold animate-[fadeInUp_1.4s_ease-out]">
-                Explore Class
-            </a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center animate-[fadeInUp_1.4s_ease-out]">
+                <a href="#curriculum" class="px-12 py-4 border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-coffee-950 transition-all duration-300 text-sm tracking-[0.2em] uppercase font-bold">
+                    View Class
+                </a>
+                <a href="#contact" class="px-12 py-4 bg-coffee-600 border border-coffee-600 text-white hover:bg-coffee-700 transition-all duration-300 text-sm tracking-[0.2em] uppercase font-bold">
+                    Contact Us
+                </a>
+            </div>
         </div>
         
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -477,12 +486,12 @@
                                 <i data-lucide="pie-chart" class="w-4 h-4"></i> SCA Flavor Wheel
                             </h4>
                             <div class="relative w-full aspect-square rounded-full overflow-hidden border-2 border-white/30 hover:scale-105 transition-transform duration-500 bg-white">
-                                <img src="https://bwissue.com/files/attach/images/195/132/629/001/763aeb54c33fae28cf2300a8abce7ef3.png" 
-                                     alt="SCA Coffee Taster's Flavor Wheel" 
-                                     class="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1000&auto=format&fit=crop" 
+                                     alt="Coffee Taster's Flavor Experience" 
+                                     class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity">
                             </div>
                             <p class="text-center text-[10px] text-gray-400 mt-2">
-                                *SCAA Coffee Taster's Flavor Wheel을 참고하여<br>다양한 향미를 표현해보세요.
+                                *SCA Flavor Wheel을 참고하여 다양한 향미를 표현해보세요.
                             </p>
                         </div>
 
@@ -553,7 +562,7 @@
                 <h2 class="text-3xl md:text-4xl font-display mt-2 section-title">가공방식 및 추출도구</h2>
             </div>
 
-            <!-- Processing Methods Images -->
+            <!-- Processing Methods Images (Updated to Local) -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
                 <div class="group relative overflow-hidden rounded shadow-lg">
                     <img src="./image/natural.jpg" loading="lazy" alt="Natural Processing" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
@@ -580,7 +589,7 @@
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded shadow-lg">
-                    <img src="./image/anerobic.jpeg" lazy" alt="Anaerobic Processing" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
+                    <img src="./image/anerobic.jpeg" loading="lazy" alt="Anaerobic Processing" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
                         <span class="text-[10px] bg-purple-600 text-white px-2 py-0.5 rounded w-fit mb-2">트렌드</span>
                         <h4 class="text-gold-400 font-bold">무산소 (Anaerobic)</h4>
@@ -671,7 +680,7 @@
                 </div>
             </div>
 
-            <!-- Extraction Tools Images -->
+            <!-- Extraction Tools Images (Updated to Local) -->
             <div>
                 <h3 class="text-2xl font-display text-coffee-900 mb-10 text-center">Extraction Tools</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -738,6 +747,41 @@
             <div class="text-center mb-16">
                 <span class="text-gold-400 tracking-widest text-xs uppercase">Chapter 04</span>
                 <h2 class="text-3xl md:text-4xl font-display mt-2 section-title">커피 추출 실습</h2>
+            </div>
+            
+            <!-- Interactive Tool: Ratio Calculator -->
+            <div class="max-w-xl mx-auto mb-20 bg-coffee-800 rounded-lg border border-gold-600 p-6 shadow-xl">
+                <h3 class="text-center text-gold-400 font-bold mb-4 flex items-center justify-center gap-2">
+                    <i data-lucide="calculator" class="w-5 h-5"></i> Brew Ratio Calculator
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">원두량 (Dose, g)</label>
+                        <input type="number" id="doseInput" value="20" class="w-full bg-coffee-900 border border-coffee-600 rounded p-2 text-white text-center focus:border-gold-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">비율 (Ratio, 1:x)</label>
+                        <input type="number" id="ratioInput" value="15" class="w-full bg-coffee-900 border border-coffee-600 rounded p-2 text-white text-center focus:border-gold-400 focus:outline-none">
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-coffee-700 text-center">
+                    <p class="text-xs text-gray-400">목표 추출량 (Yield)</p>
+                    <p class="text-3xl font-bold text-white mt-1"><span id="yieldResult">300</span> <span class="text-sm font-normal text-gold-400">ml</span></p>
+                </div>
+                <script>
+                    const doseInput = document.getElementById('doseInput');
+                    const ratioInput = document.getElementById('ratioInput');
+                    const yieldResult = document.getElementById('yieldResult');
+
+                    function calculateYield() {
+                        const dose = parseFloat(doseInput.value) || 0;
+                        const ratio = parseFloat(ratioInput.value) || 0;
+                        yieldResult.textContent = dose * ratio;
+                    }
+
+                    doseInput.addEventListener('input', calculateYield);
+                    ratioInput.addEventListener('input', calculateYield);
+                </script>
             </div>
 
             <!-- Barista Tools Grid & Maintenance -->
@@ -977,6 +1021,35 @@
         </div>
     </section>
 
+    <!-- New Section: Contact -->
+    <section id="contact" class="py-24 bg-white border-t border-coffee-200">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+             <div class="mb-12">
+                <span class="text-coffee-600 tracking-widest text-xs uppercase">Join Us</span>
+                <h2 class="text-3xl md:text-4xl font-display mt-2 text-coffee-900">Start Your Coffee Journey</h2>
+                <p class="text-gray-500 mt-4">라온트리와 함께 커피 전문가의 꿈을 키워보세요.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="p-6 bg-coffee-50 rounded-lg">
+                    <i data-lucide="phone" class="w-8 h-8 text-gold-500 mx-auto mb-4"></i>
+                    <h4 class="font-bold text-coffee-900 mb-2">Phone</h4>
+                    <p class="text-gray-600 text-sm">010-5606-0845</p>
+                </div>
+                <div class="p-6 bg-coffee-50 rounded-lg">
+                    <i data-lucide="mail" class="w-8 h-8 text-gold-500 mx-auto mb-4"></i>
+                    <h4 class="font-bold text-coffee-900 mb-2">Email</h4>
+                    <p class="text-gray-600 text-sm">galeb76@naver.com</p>
+                </div>
+                <div class="p-6 bg-coffee-50 rounded-lg">
+                    <i data-lucide="map" class="w-8 h-8 text-gold-500 mx-auto mb-4"></i>
+                    <h4 class="font-bold text-coffee-900 mb-2">Location</h4>
+                    <p class="text-gray-600 text-sm">경기도 부천시 소사로 203 2층 카페 라온트리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-coffee-950 text-coffee-300 py-12 border-t border-coffee-900">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -989,13 +1062,18 @@
                 <p class="text-sm mt-1">대표: 이광복</p>
             </div>
             <div class="text-sm text-center md:text-right">
-                <p>Copyright © 2018 RAONTREE. All rights reserved.</p>
+                <p>Copyright © 2024 RAONTREE. All rights reserved.</p>
                 <p class="mt-2 text-coffee-500">
                     본 사이트는 라온트리 교육 자료를 위한 페이지입니다.
                 </p>
             </div>
         </div>
     </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-gold-500 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-gold-600 z-40 hidden">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
 
     <script>
         // 1. Initialize Lucide Icons
@@ -1016,7 +1094,7 @@
             });
         });
 
-        // 3. Scroll Animation for Steaming Line
+        // 3. Scroll Animation for Steaming Line & Scroll to Top
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -1039,6 +1117,26 @@
         if (steamSection) {
             observer.observe(steamSection);
         }
+
+        // Scroll to Top Logic
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+                setTimeout(() => scrollToTopBtn.classList.remove('opacity-0'), 10);
+            } else {
+                scrollToTopBtn.classList.add('opacity-0');
+                setTimeout(() => scrollToTopBtn.classList.add('hidden'), 300);
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
