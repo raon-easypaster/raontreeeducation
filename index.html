@@ -136,7 +136,7 @@
         .menu-cup {
             position: relative;
             width: 80px;
-            height: 100px; /* Reduced height to prevent overflow/excessive size */
+            height: 100px;
             margin: 0 auto;
             border: 2px solid #4e3024;
             border-top: none;
@@ -149,7 +149,7 @@
         .menu-cup-handle {
             position: absolute;
             top: 20px;
-            right: -25px; /* Adjusted right position */
+            right: -25px; 
             width: 25px;
             height: 40px;
             border: 2px solid #4e3024;
@@ -419,7 +419,7 @@
                         </p>
                     </div>
 
-                    <!-- [Added] Water & Temperature -->
+                    <!-- Water & Temperature (Updated: 90-95) -->
                     <div class="bg-blue-50/50 p-6 rounded border border-blue-100">
                         <h3 class="text-lg font-bold text-coffee-900 mb-3 flex items-center gap-2">
                             <i data-lucide="droplet" class="text-blue-400 w-5 h-5"></i> 물과 온도 (Water & Temp)
@@ -430,7 +430,7 @@
                         <div class="grid grid-cols-2 gap-2 text-center text-xs">
                             <div class="bg-white p-2 rounded shadow-sm">
                                 <span class="block text-red-800 font-bold">약배전 (Light)</span>
-                                <span class="text-gray-500">93°C ~ 95°C</span>
+                                <span class="text-gray-500">90°C ~ 95°C</span>
                             </div>
                             <div class="bg-white p-2 rounded shadow-sm">
                                 <span class="block text-coffee-900 font-bold">강배전 (Dark)</span>
@@ -458,7 +458,7 @@
 
                 <!-- Tastes & Delicious Coffee -->
                 <div class="space-y-8">
-                    <!-- Flavor Wheel Section -->
+                    <!-- Flavor Wheel Section (Updated with SCA Image) -->
                     <div class="bg-coffee-900 text-white p-8 rounded shadow-2xl">
                         <h3 class="text-xl font-display text-gold-400 mb-8 text-center leading-relaxed">
                             커피의 4가지 맛과<br>3천여가지 향을 찾아 떠나는 여행
@@ -471,7 +471,22 @@
                         </div>
                         <p class="text-center text-xs text-gray-400 mb-6">Aroma: 과일, 꽃, 허브, 견과류, 초콜릿 등</p>
 
-                        <!-- [Added] Cupping Protocol -->
+                        <!-- [Updated] SCA Flavor Wheel -->
+                        <div class="mb-8 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20">
+                            <h4 class="text-sm font-bold text-gold-400 mb-4 text-center flex items-center justify-center gap-2">
+                                <i data-lucide="pie-chart" class="w-4 h-4"></i> SCA Flavor Wheel
+                            </h4>
+                            <div class="relative w-full aspect-square rounded-full overflow-hidden border-2 border-white/30 hover:scale-105 transition-transform duration-500 bg-white">
+                                <img src="https://bwissue.com/files/attach/images/195/132/629/001/763aeb54c33fae28cf2300a8abce7ef3.png" 
+                                     alt="SCA Coffee Taster's Flavor Wheel" 
+                                     class="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity">
+                            </div>
+                            <p class="text-center text-[10px] text-gray-400 mt-2">
+                                *SCAA Coffee Taster's Flavor Wheel을 참고하여<br>다양한 향미를 표현해보세요.
+                            </p>
+                        </div>
+
+                        <!-- Cupping Protocol -->
                          <div class="border-t border-coffee-700 pt-6">
                             <h4 class="text-sm font-bold text-gold-400 mb-4 text-center flex items-center justify-center gap-2">
                                 <i data-lucide="utensils-crossed" class="w-4 h-4"></i> Cupping Protocol
@@ -530,7 +545,7 @@
         </div>
     </section>
 
-    <!-- Chapter 3: Processing & Tools -->
+ <!-- Chapter 3: Processing & Tools -->
     <section id="brewing" class="py-24 bg-coffee-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -712,7 +727,6 @@
             </div>
         </div>
     </section>
-
     <!-- Chapter 4: Practice -->
     <section id="practice" class="py-24 bg-coffee-900 text-white">
         <div class="container mx-auto px-6">
@@ -734,7 +748,7 @@
                     </div>
                 </div>
                 
-                <!-- [Added] Machine Maintenance -->
+                <!-- Machine Maintenance -->
                 <div class="bg-coffee-950/50 p-6 border-t border-coffee-700 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
                     <div class="flex items-center gap-3">
                         <div class="bg-red-900/50 p-2 rounded-full text-red-400"><i data-lucide="wrench" class="w-5 h-5"></i></div>
@@ -897,7 +911,7 @@
                 </div>
             </div>
 
-            <!-- [Added] Menu Variations -->
+            <!-- Menu Variations -->
             <div class="bg-coffee-900 border border-coffee-700 rounded-xl p-8">
                 <h3 class="text-2xl font-display text-gold-400 mb-10 text-center">Menu Variations</h3>
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -931,7 +945,7 @@
                         <h4 class="mt-4 font-bold text-white text-sm">Flat White</h4>
                         <span class="text-[10px] text-gray-400">Thin Foam</span>
                     </div>
-                     <!-- Latte -->
+                      <!-- Latte -->
                     <div class="text-center group">
                         <div class="menu-cup group-hover:-translate-y-2 transition-transform duration-300">
                             <div class="menu-cup-handle"></div>
